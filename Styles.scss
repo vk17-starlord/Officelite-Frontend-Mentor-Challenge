@@ -97,21 +97,29 @@ p{
 
   @media screen and (max-width: 768px){
     .container{
-      width:85% !important;
+      width:90% !important;
     }
+
+
     .end{
       justify-content:center !important;
       align-items:center !important;
+    }
+    .hero{
+      width:auto;
+      .col{
+        padding: 20px 0;
+      }
     }
     .hero,.navbar{
       margin-top: 0;
       text-align: center;
       h1{
-        text-align: center;
+        text-align: left;
         font-size: 36px;
       }
       p{
-        text-align: center;
+        text-align: left;
       }
     .col{
       min-height: auto;

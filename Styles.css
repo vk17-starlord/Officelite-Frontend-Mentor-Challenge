@@ -91,7 +91,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .container {
-    width: 85% !important;
+    width: 90% !important;
   }
   .end {
     -webkit-box-pack: center !important;
@@ -101,16 +101,22 @@ body {
         -ms-flex-align: center !important;
             align-items: center !important;
   }
+  .hero {
+    width: auto;
+  }
+  .hero .col {
+    padding: 20px 0;
+  }
   .hero, .navbar {
     margin-top: 0;
     text-align: center;
   }
   .hero h1, .navbar h1 {
-    text-align: center;
+    text-align: left;
     font-size: 36px;
   }
   .hero p, .navbar p {
-    text-align: center;
+    text-align: left;
   }
   .hero .col, .navbar .col {
     min-height: auto;
