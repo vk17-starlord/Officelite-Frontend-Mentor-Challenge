@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officelite</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="./assets/shared/logo.svg" style="object-fit: contain;">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles.css" />
+    </head>
+<body>
+    
+  <div class="container before">
+<div class="navbar">
+  <img src="./assets/shared/logo.svg">
+</div>
+
+<div class="hero row" data-aos="zoom-out-up"   data-aos-duration="1500">
+  <div class="col-sm-12 col-lg-6 col">
+<h1>A simple solution to complex tasks is coming soon</h1>
+<p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
+<button class='cta'>Get Started</button>
+</div>
+  <div class="col-sm-12 col-lg-6 col bg">
+   
+  </div>
+
+</div>
+
+
+
+  </div>
+<div class="pricing-container">
+  <div class="container row">
+    <div class="col-sm-12 col-lg-4 p-col">
+      <div class="p-card" data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-in-sine">
+        <h4>Basic</h4>
+        <h1>Free</h1>
+        <p>Up to 5 users for free</p>
+
+        <li>Basic document collaboration</li>
+        <li>2 GB storage</li>
+        <li>Great security and support</li>
+
+        <button class="btn-light">Try For Free</button>
+
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-4 p-col">
+      <div class="p-card dark" data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-in-sine">
+        <h4>Basic</h4>
+        <h1>Free</h1>
+        <p>Up to 5 users for free</p>
+
+        <li>Basic document collaboration</li>
+        <li>2 GB storage</li>
+        <li>Great security and support</li>
+
+        <button class="btn-light">Try For Free</button>
+
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-4 p-col">
+      <div class="p-card " data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-in-sine">
+        <h4>Basic</h4>
+        <h1>Free</h1>
+        <p>Up to 5 users for free</p>
+
+        <li>Basic document collaboration</li>
+        <li>2 GB storage</li>
+        <li>Great security and support</li>
+
+        <button class="btn-light">Try For Free</button>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+    <div class="container row">
+      <div class="col-sm-12 col-lg-6 ">
+        <h4>Coming <span>6 Apr 2021</span></h4>
+        <div class="timer">
+      <div class="t-card">
+        <span id="days"> </span>
+        <p>days</p>
+      </div>
+      <div class="t-card">
+        <span id="hours"> </span>
+        <p>hours</p>
+      </div>
+      <div class="t-card">
+        <span id="mins"> </span>
+        <p>mins</p>
+      </div>
+      <div class="t-card">
+        <span id="secs"> </span>
+        <p>sec</p>
+      </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 end">
+        <button class="cta">Get Started</button>
+      </div>
+
+    </div>
+</footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    var countDownDate = new Date("Apr 6, 2021 15:37:25").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+    
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById('days').innerHTML = days;
+  document.getElementById('mins').innerHTML = minutes;
+  document.getElementById('hours').innerHTML = hours;
+  document.getElementById('secs').innerHTML = seconds ;
+  
+}, 1000);
+  </script>
+</body>
+</html>
