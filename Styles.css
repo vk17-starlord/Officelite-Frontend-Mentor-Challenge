@@ -93,6 +93,10 @@ body {
   .container {
     width: 90% !important;
   }
+  form {
+    margin: 0 auto !important;
+    padding: 20px 0;
+  }
   .end {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
@@ -138,6 +142,11 @@ body {
 
 .pricing-container {
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  z-index: 2;
   color: #333950;
 }
 
@@ -240,7 +249,7 @@ body {
 
 footer {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
   min-height: 75vh;
   background-color: #25293a;
@@ -262,7 +271,61 @@ footer h4 span {
   color: #5175ff;
 }
 
-footer .timer {
+.end {
+  min-height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  position: relative;
+  z-index: 2 !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.main-col {
+  min-height: 100vh;
+}
+
+.main-col .container {
+  width: 60%;
+}
+
+.main-col .para {
+  font-size: 20px;
+  color: #747b9b;
+  line-height: 125%;
+  margin: 5vh auto;
+}
+
+.main-col h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+}
+
+.main-col h4 span {
+  color: #5175ff;
+}
+
+.main-col .heading {
+  font-size: 58px;
+  line-height: 120%;
+  color: #333950;
+  font-weight: 800;
+}
+
+.timer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,9 +337,9 @@ footer .timer {
       flex-wrap: wrap;
 }
 
-footer .timer .t-card {
+.timer .t-card {
   width: 120px;
-  margin: 10px auto;
+  margin: 10px 0;
   min-height: 100px;
   border-radius: 10px;
   padding: 20px 10px;
@@ -298,13 +361,13 @@ footer .timer .t-card {
   background-color: #333950;
 }
 
-footer .timer .t-card span {
+.timer .t-card span {
   font-weight: 800;
   font-size: 52px;
   line-height: 52px;
 }
 
-footer .timer .t-card p {
+.timer .t-card p {
   margin: 0px auto;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -312,15 +375,155 @@ footer .timer .t-card p {
   opacity: 0.9;
 }
 
-.end {
-  min-height: 30vh;
+.timer .t-card.light {
+  background-color: #edf1ff !important;
+  color: #5175ff !important;
+}
+
+.darkbg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-size: cover;
+  background-color: #25293a;
+  background-image: url("./assets/home/bg-pattern-footer.svg");
+}
+
+form {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -40%;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0;
+  width: 90%;
+  min-height: 50vh;
+  background-color: white;
+}
+
+form input {
+  width: 80%;
+  margin: 10px auto;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid #747b9b;
+  padding: 10px 10px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+form input :focus {
+  outline: none !important;
+  border: none !important;
+}
+
+form input::-webkit-input-placeholder {
+  color: #747b9b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+form input:-ms-input-placeholder {
+  color: #747b9b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+form input::-ms-input-placeholder {
+  color: #747b9b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+form input::placeholder {
+  color: #747b9b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+form button {
+  background-color: #5175ff;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 16px;
+  width: 70%;
+  position: relative;
+  padding: 15px 10px;
+  margin: 20px auto;
+  border-radius: 30px;
+}
+
+form button:hover {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  background-color: #849dff;
+}
+
+form h5 {
+  width: 100%;
+  font-size: 16px;
+  color: #333950;
+  font-weight: 800;
+}
+
+form h5 span {
+  margin: 0 20px;
+  color: #747b9b;
+}
+
+form .list {
+  text-align: center;
+  margin: 10px auto;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 -1.5px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 -1.5px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 75%;
+  height: 0vh;
+  border-radius: 10px;
+  display: none;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+form .list h5 {
+  cursor: pointer;
+  border-bottom: 1px solid #747b9b;
+  padding: 10px;
+}
+
+form .dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #747b9b;
+  padding: 15px 10px !important;
+  width: 80%;
+}
+
+form .dropdown i {
+  color: #5175ff;
+  font-size: 20px;
+  cursor: pointer !important;
 }

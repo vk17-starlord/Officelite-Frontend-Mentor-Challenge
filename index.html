@@ -10,7 +10,7 @@
       href="./assets/shared/logo.svg" style="object-fit: contain;">
       <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./Styles.css" />
     </head>
@@ -25,7 +25,10 @@
   <div class="col-sm-12 col-lg-6 col">
 <h1>A simple solution to complex tasks is coming soon</h1>
 <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
-<button class='cta'>Get Started</button>
+<a href="./Signup.html">
+  <button class='cta'>Get Started</button>
+</a>
+
 </div>
   <div class="col-sm-12 col-lg-6 col bg">
    
@@ -109,7 +112,10 @@
         </div>
       </div>
       <div class="col-sm-12 col-lg-6 end">
-        <button class="cta">Get Started</button>
+        <a href="./Signup.html">
+          <button class='cta'>Get Started</button>
+          <i class='bx bx-hot'></i>
+        </a>
       </div>
 
     </div>
@@ -117,27 +123,8 @@
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    var countDownDate = new Date("Apr 6, 2021 15:37:25").getTime();
+  <script src="./index.js">
 
-var x = setInterval(function() {
-
-  var now = new Date().getTime();
-    
-  var distance = countDownDate - now;
-    
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById('days').innerHTML = days;
-  document.getElementById('mins').innerHTML = minutes;
-  document.getElementById('hours').innerHTML = hours;
-  document.getElementById('secs').innerHTML = seconds ;
-  
-}, 1000);
   </script>
 </body>
 </html>

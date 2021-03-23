@@ -99,7 +99,10 @@ p{
     .container{
       width:90% !important;
     }
-
+    form{
+      margin: 0 auto !important;
+      padding: 20px 0;
+    }
 
     .end{
       justify-content:center !important;
@@ -143,7 +146,9 @@ p{
 
   .pricing-container{
     width: 100%;
- 
+    height: max-content;
+    position:relative;
+    z-index: 2;
    
    .p-card.dark{
      color: white;
@@ -230,7 +235,7 @@ transition:1s ease-in;
 
   footer{
    position: relative;
-   z-index: -1;
+   z-index: 1;
    width: 100%;
    min-height: 75vh;
    background-color:#25293a;
@@ -248,6 +253,56 @@ transition:1s ease-in;
       color: $primary;
     }
   }
+   }
+
+  .end{
+
+    min-height: 30vh;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+  }
+
+  button{
+    position:relative;
+z-index: 2 !important;
+
+&:focus{
+  outline: none !important;
+}
+  }
+
+
+  // signup
+
+  .main-col{
+ 
+    min-height: 100vh;
+   .container{
+     width:60%;
+   }
+   .para{
+     font-size: 20px;
+     color: $lightgrey;
+     line-height: 125%;
+     margin: 5vh auto;
+   }
+   h4{
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+    span{
+      color: $primary;
+    }
+  }
+    .heading{
+      font-size: 58px;
+      line-height: 120%;
+   color: $darkblue;
+   font-weight: 800; 
+    }
+  }
+
   .timer{
 
     width: 100%;
@@ -255,9 +310,11 @@ transition:1s ease-in;
     justify-content: space-between;
  
     flex-wrap: wrap;
+
+
 .t-card{
   width: 120px;
-  margin: 10px auto;
+  margin: 10px 0;
   min-height: 100px;
   border-radius: 10px;
   padding:20px 10px;
@@ -280,13 +337,113 @@ transition:1s ease-in;
   }
 background-color: #333950;
 }
+.t-card.light{
+  background-color: #edf1ff !important;
+  color: $primary !important;
+}
   }
-  }
-
-  .end{
-
-    min-height: 30vh;
+ 
+  .darkbg{
     display: flex;
-    justify-content:flex-end;
-    align-items: center;
+    justify-content: flex-start;
+    align-items:center;
+    background-size: cover;
+    background-color: #25293a;
+    background-image: url('./assets/home/bg-pattern-footer.svg');
+  }
+
+  form{
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-left: -40%;
+    position: relative;
+    flex-direction: column;
+    padding: 30px 0;
+    input{
+      width: 80%;
+      margin: 10px auto;
+      border:none ;
+      font-size: 18px;
+      border-bottom: 1px solid $lightgrey;
+      padding: 10px 10px;
+      border-radius: 0px; 
+     box-shadow: none;
+    
+      :focus
+      {
+        outline:none !important;
+        border:none !important;
+      }
+      &::placeholder{
+        color: $lightgrey;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    button{
+      background-color: $primary;
+      border: none !important;
+      color: #ffffff !important;
+      font-weight: 800;
+      font-size: 16px;
+      width: 70%;
+      position:relative;
+      padding: 15px 10px;
+      margin: 20px auto;
+      border-radius: 30px;
+      &:hover{
+        transition:0.5s ease-in-out;
+        background-color: lighten($color: $primary, $amount: 10);
+      }
+    }
+    h5{
+      width: 100%;
+   font-size: 16px;
+   color: $darkblue;
+   span
+   {
+     margin: 0 20px;
+     color: $lightgrey;
+   }
+   font-weight: 800;
+    }
+    .list{
+      
+      text-align: center;
+      h5{
+        cursor:pointer; 
+        border-bottom: 1px solid $lightgrey;
+        padding: 10px;
+      }
+      margin: 10px auto;
+      box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0 -1.5px 10px rgba(0, 0, 0, 0.05),;
+padding:20px;
+
+      width: 75%;
+     height: 0vh;
+   border-radius: 10px;
+display: none;
+transition: all .2s ease-out;
+    }
+    .dropdown{
+      i{
+        color: $primary;
+        font-size: 20px;
+        cursor: pointer !important;
+      }
+      display: flex;
+      justify-content: space-between;
+      border-bottom:1px solid $lightgrey;
+    padding: 15px 10px !important;
+      width: 80%;
+    }
+    width:90%;
+    min-height: 50vh;
+    background-color: white;
   }
